@@ -6,5 +6,5 @@
 | FR1.2 | NFR1.2| Time Performance         | 10 - 15 sec   |
 | FR1.3 | NFR1.3| Time Performance         | 5 sec    |
 |  | NFR1.4| Hardware                    | Комп'ютер, стандартна комп'ютерна клавіатура, 2/3-кнопочний маніпулятор типу "комп'ютерна миша"        |
-|  | NFR1.5| Software Interface          | Windows 7/8/10/11; Android               |
+|  | NFR1.5| Software Interface          | стандартна комп'ютерна клавіатура               |
 |  | NFR1.6| Data Transfer Interface     | Ethernet, WiFi, зі швидкість від 1 Мбіт/с                                                |
