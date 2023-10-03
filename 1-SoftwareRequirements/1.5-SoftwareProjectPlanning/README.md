@@ -1,1 +1,1 @@
-1.5-SoftwareProjectPlanning
+SoftwareProjectPlanning
