@@ -1,0 +1,45 @@
+@startuml
+
+title Example of Relation Schema
+
+hide circle
+
+entity "User" as User {
+    (PK) Userno
+    --
+    full_name
+    email
+    location
+}
+
+entity "AirConditionStateRequest" as AirConditionStateRequest{
+    (PK) AirConditionStaterequestno
+    --
+    location
+    requestType
+    info
+    (FK) Userno
+}
+
+entity "AirConditionStateAnswer" as AirConditionStateAnswer{
+    (PK) AirConditionStateAnswerno
+    --
+    answerTitle
+    info
+    date
+    (FK) AirConditionStaterequestno
+    (FK) EFreshAirno
+}
+
+entity "EFreshAir" as EFreshAir{
+    (PK) EFreshAirno
+    --
+    location
+    airConditionState
+}
+
+User --{ AirConditionStateRequest
+AirConditionStateRequest--{ AirConditionStateAnswer
+EFreshAir --{ AirConditionStateAnswer
+
+@enduml
