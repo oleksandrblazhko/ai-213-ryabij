@@ -1,0 +1,29 @@
+@startuml
+
+hide circle
+title Example of Classes Diagram 
+
+Class User{
+    fullName
+    email
+    location
+}
+
+Class AirConditionStateRequest{
+    location
+    requestType
+    info
+}
+
+Class AirConditionStateAnswer{
+    answerTitle
+    info
+    date
+}
+
+
+User"1" --> "*"AirConditionStateRequest: send
+
+AirConditionStateAnswer"1" --> "1"AirConditionStateRequest : answer
+
+@enduml
