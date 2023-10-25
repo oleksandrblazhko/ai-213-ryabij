@@ -26,8 +26,8 @@ rectangle Software {
     EFreshAir -- (Перегляд інформації про якість повітря)
     HealthSpecialist -- (Звернення за консультацією щодо фізичного здоров'я)
 
-    SkulptureSpecialist -- User
-    HealthSpecialist -- User 
+    SkulptureSpecialist --|> User
+    HealthSpecialist --|> User 
 
    (Перегляд інформації про якість повітря) .> (Авторизувати користувача) : include
    (Звернення за консультацією щодо скульптурування) .> (Авторизувати користувача) : include
