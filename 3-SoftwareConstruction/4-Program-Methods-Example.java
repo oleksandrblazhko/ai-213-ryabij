@@ -1,7 +1,7 @@
 package com.lab9.airstatechecker.entity;
 
 import jakarta.persistence.*;
-//сутність EFreshAir
+
 @Entity
 public class EFreshAir {
     @Id
@@ -11,18 +11,20 @@ public class EFreshAir {
     private String location;
     @Column(name = "air_condition_state")
     private String airConditionState;
-    //розглянутий метод для отрмання стану про якість повітря, також враховуються необхідні вимоги
-    public String getAirStateInfo(String location) {
-        if (location.length() > 20 || !location.matches("^[a-zA-Z\\s]+$")) {
-            return "-1";
+    //method
+    public String getAirStateInfo(String user, String location) {
+        String result = "";
+        if (location.length() > 20 || !user.matches("^[a-zA-Z\\s]+$") || user.isBlank()) {
+            result = "-1";
         }
-        return """
+        result = """
                     The city of New York today has excellent air quality.
                                 The level of air pollution at the moment meets
                                 all norms and safety standards.
                                 Citizens can enjoy fresh air and safe living conditions
                                 Temperature in the city is 24C
                     """;
+        return result;
     }
 
     public EFreshAir(String location, String airConditionState) {
